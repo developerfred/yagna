@@ -172,8 +172,8 @@ ya-sb-router = { git = "https://github.com/golemfactory/ya-service-bus.git", rev
 ya-sb-util = { git = "https://github.com/golemfactory/ya-service-bus.git", rev = "6b494e17d7a662e0b710af8c5a2e99ab4007fdb9"}
 
 ## CLIENT
-ya-client = { git = "https://github.com/golemfactory/ya-client.git", rev = "414ae23d3ebb1363ff9c26975f6797a7b5329504"}
-ya-client-model = { git = "https://github.com/golemfactory/ya-client.git", rev = "414ae23d3ebb1363ff9c26975f6797a7b5329504"}
+ya-client = { git = "https://github.com/golemfactory/ya-client.git", rev = "448fe3c8ffe293c4c6e8a4385d17276132e1c0ee"}
+ya-client-model = { git = "https://github.com/golemfactory/ya-client.git", rev = "448fe3c8ffe293c4c6e8a4385d17276132e1c0ee"}
 
 #ya-client = { path = "../ya-client" }
 #ya-client-model = { path = "../ya-client/model" }

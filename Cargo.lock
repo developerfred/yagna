@@ -5351,7 +5351,6 @@ checksum = "2932dc07acd2066ff2e3921a4419606b220ba6cd03a9935123856cc534877056"
 dependencies = [
  "rand 0.6.5",
  "secp256k1-sys 0.1.2",
- "serde",
 ]
 
 [[package]]
@@ -5362,6 +5361,7 @@ checksum = "c6179428c22c73ac0fbb7b5579a56353ce78ba29759b3b8575183336ea74cdfb"
 dependencies = [
  "rand 0.6.5",
  "secp256k1-sys 0.3.0",
+ "serde",
 ]
 
 [[package]]
@@ -7156,7 +7156,7 @@ dependencies = [
 [[package]]
 name = "ya-client"
 version = "0.4.0"
-source = "git+https://github.com/golemfactory/ya-client.git?rev=414ae23d3ebb1363ff9c26975f6797a7b5329504#414ae23d3ebb1363ff9c26975f6797a7b5329504"
+source = "git+https://github.com/golemfactory/ya-client.git?rev=448fe3c8ffe293c4c6e8a4385d17276132e1c0ee#448fe3c8ffe293c4c6e8a4385d17276132e1c0ee"
 dependencies = [
  "awc 1.0.1",
  "bytes 0.5.6",
@@ -7181,7 +7181,7 @@ dependencies = [
 [[package]]
 name = "ya-client-model"
 version = "0.2.0"
-source = "git+https://github.com/golemfactory/ya-client.git?rev=414ae23d3ebb1363ff9c26975f6797a7b5329504#414ae23d3ebb1363ff9c26975f6797a7b5329504"
+source = "git+https://github.com/golemfactory/ya-client.git?rev=448fe3c8ffe293c4c6e8a4385d17276132e1c0ee#448fe3c8ffe293c4c6e8a4385d17276132e1c0ee"
 dependencies = [
  "bigdecimal 0.1.2",
  "chrono",
@@ -7190,7 +7190,7 @@ dependencies = [
  "hex",
  "openssl",
  "rand 0.7.3",
- "secp256k1 0.17.2",
+ "secp256k1 0.19.0",
  "serde",
  "serde_json",
  "strum 0.19.5",
@@ -7210,7 +7210,7 @@ dependencies = [
 
 [[package]]
 name = "ya-core-model"
-version = "0.2.1"
+version = "0.2.2"
 dependencies = [
  "bigdecimal 0.1.2",
  "bitflags 1.2.1",
@@ -7260,7 +7260,7 @@ dependencies = [
 
 [[package]]
 name = "ya-exe-unit"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "actix 0.9.0",
  "actix-files 0.4.1",
@@ -7268,14 +7268,17 @@ dependencies = [
  "actix-web 3.3.2",
  "anyhow",
  "async-trait",
+ "bytes 0.5.6",
  "chrono",
  "derivative",
+ "derive_more",
  "dotenv",
  "env_logger 0.7.1",
  "flexi_logger",
  "futures 0.3.12",
  "graphene-sgx",
  "hex",
+ "ipnet",
  "lazy_static",
  "libproc",
  "log",
@@ -7296,7 +7299,7 @@ dependencies = [
  "tempdir",
  "thiserror",
  "tokio 0.2.24",
- "tokio-util 0.2.0",
+ "tokio-util 0.3.1",
  "url 2.2.0",
  "winapi 0.3.9",
  "ya-agreement-utils",
