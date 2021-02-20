@@ -12,7 +12,7 @@ service = []
 ya-core-model = { path = "../model", features=["net", "identity"] }
 ya-service-api = "0.1"
 ya-service-api-interfaces = "0.1"
-ya-service-bus = "0.3"
+ya-service-bus = "0.4"
 
 actix-rt = "1.0"
 anyhow = "1.0"
@@ -26,7 +26,7 @@ trust-dns-resolver = { version = "0.19", features = ["mdns"] }
 
 [dev-dependencies]
 ya-sb-proto = "0.1"
-ya-sb-router = "0.3"
+ya-sb-router = "0.4"
 
 env_logger = "0.7"
 serde = "1.0"

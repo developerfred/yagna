@@ -2359,6 +2359,12 @@ dependencies = [
 
 [[package]]
 name = "fixedbitset"
+version = "0.1.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "86d4de0081402f5e88cdac65c8dcdcc73118c1a7a465e2a05f0da05843a8ea33"
+
+[[package]]
+name = "fixedbitset"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "37ab347416e802de484e4d03c7316c48f1ecb56574dfd4a46a80f173ce1de04d"
@@ -3712,6 +3718,12 @@ dependencies = [
 
 [[package]]
 name = "multimap"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2eb04b9f127583ed176e163fb9ec6f3e793b87e21deedd5734a69386a18a0151"
+
+[[package]]
+name = "multimap"
 version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1255076139a83bb467426e7f8d0134968a8118844faa755985e077cf31850333"
@@ -4335,11 +4347,20 @@ dependencies = [
 
 [[package]]
 name = "petgraph"
+version = "0.4.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9c3659d1ee90221741f65dd128d9998311b0e40c5d3c23a62445938214abce4f"
+dependencies = [
+ "fixedbitset 0.1.9",
+]
+
+[[package]]
+name = "petgraph"
 version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "467d164a6de56270bd7c4d070df81d07beace25012d5103ced4e9ff08d6afdb7"
 dependencies = [
- "fixedbitset",
+ "fixedbitset 0.2.0",
  "indexmap",
 ]
 
@@ -4549,12 +4570,41 @@ dependencies = [
 
 [[package]]
 name = "prost"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "96d14b1c185652833d24aaad41c5832b0be5616a590227c1fbff57c616754b23"
+dependencies = [
+ "byteorder",
+ "bytes 0.4.12",
+ "prost-derive 0.5.0",
+]
+
+[[package]]
+name = "prost"
 version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ce49aefe0a6144a45de32927c77bd2859a5f7677b55f220ae5b744e87389c212"
 dependencies = [
  "bytes 0.5.6",
- "prost-derive",
+ "prost-derive 0.6.1",
+]
+
+[[package]]
+name = "prost-build"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "eb788126ea840817128183f8f603dce02cb7aea25c2a0b764359d8e20010702e"
+dependencies = [
+ "bytes 0.4.12",
+ "heck",
+ "itertools",
+ "log",
+ "multimap 0.4.0",
+ "petgraph 0.4.13",
+ "prost 0.5.0",
+ "prost-types 0.5.0",
+ "tempfile",
+ "which 2.0.1",
 ]
 
 [[package]]
@@ -4567,12 +4617,25 @@ dependencies = [
  "heck",
  "itertools",
  "log",
- "multimap",
- "petgraph",
- "prost",
- "prost-types",
+ "multimap 0.8.2",
+ "petgraph 0.5.1",
+ "prost 0.6.1",
+ "prost-types 0.6.1",
  "tempfile",
- "which",
+ "which 3.1.1",
+]
+
+[[package]]
+name = "prost-derive"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5e7dc378b94ac374644181a2247cebf59a6ec1c88b49ac77f3a94b86b79d0e11"
+dependencies = [
+ "failure",
+ "itertools",
+ "proc-macro2 0.4.30",
+ "quote 0.6.13",
+ "syn 0.15.44",
 ]
 
 [[package]]
@@ -4590,12 +4653,22 @@ dependencies = [
 
 [[package]]
 name = "prost-types"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1de482a366941c8d56d19b650fac09ca08508f2a696119ee7513ad590c8bac6f"
+dependencies = [
+ "bytes 0.4.12",
+ "prost 0.5.0",
+]
+
+[[package]]
+name = "prost-types"
 version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1834f67c0697c001304b75be76f67add9c89742eda3a085ad8ee0bb38c3417aa"
 dependencies = [
  "bytes 0.5.6",
- "prost",
+ "prost 0.6.1",
 ]
 
 [[package]]
@@ -7000,6 +7073,16 @@ dependencies = [
 
 [[package]]
 name = "which"
+version = "2.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b57acb10231b9493c8472b20cb57317d0679a49e0bdbee44b3b803a6473af164"
+dependencies = [
+ "failure",
+ "libc",
+]
+
+[[package]]
+name = "which"
 version = "3.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d011071ae14a2f6671d0b74080ae0cd8ebf3a6f8c9589a2cd45f23126fe29724"
@@ -7522,7 +7605,7 @@ dependencies = [
  "tokio 0.2.24",
  "trust-dns-resolver 0.19.6",
  "ya-core-model",
- "ya-sb-proto",
+ "ya-sb-proto 0.1.0",
  "ya-sb-router",
  "ya-service-api",
  "ya-service-api-interfaces",
@@ -7684,8 +7767,8 @@ dependencies = [
  "env_logger 0.7.1",
  "futures 0.3.12",
  "log",
- "prost",
- "prost-build",
+ "prost 0.6.1",
+ "prost-build 0.6.1",
  "serde",
  "serde_json",
  "tokio 0.2.24",
@@ -7695,11 +7778,27 @@ dependencies = [
 [[package]]
 name = "ya-sb-proto"
 version = "0.1.0"
-source = "git+https://github.com/golemfactory/ya-service-bus.git?rev=6b494e17d7a662e0b710af8c5a2e99ab4007fdb9#6b494e17d7a662e0b710af8c5a2e99ab4007fdb9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "42290be63859a8bc97eb40d1029208b3dc6df03b38f47e6c7f523876e5ee3d38"
 dependencies = [
  "bytes 0.5.6",
- "prost",
- "prost-build",
+ "prost 0.6.1",
+ "prost-build 0.5.0",
+ "thiserror",
+ "tokio 0.2.24",
+ "tokio-util 0.2.0",
+ "url 2.2.0",
+]
+
+[[package]]
+name = "ya-sb-proto"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ba491b25b0ca2d03f697c7a734f79f7bb9550e570132bd95af53f62d52668424"
+dependencies = [
+ "bytes 0.5.6",
+ "prost 0.6.1",
+ "prost-build 0.6.1",
  "thiserror",
  "tokio 0.2.24",
  "tokio-util 0.2.0",
@@ -7708,8 +7807,9 @@ dependencies = [
 
 [[package]]
 name = "ya-sb-router"
-version = "0.3.1"
-source = "git+https://github.com/golemfactory/ya-service-bus.git?rev=6b494e17d7a662e0b710af8c5a2e99ab4007fdb9#6b494e17d7a662e0b710af8c5a2e99ab4007fdb9"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d10e05cad4f3d9eb46c48e5ae6a6ecfe49c1373707b886a167e2dac130b86075"
 dependencies = [
  "anyhow",
  "bytes 0.4.12",
@@ -7717,20 +7817,21 @@ dependencies = [
  "futures 0.3.12",
  "lazy_static",
  "log",
- "prost",
+ "prost 0.6.1",
  "structopt",
  "tokio 0.2.24",
  "tokio-util 0.2.0",
  "url 2.2.0",
  "uuid 0.8.2",
- "ya-sb-proto",
+ "ya-sb-proto 0.2.0",
  "ya-sb-util",
 ]
 
 [[package]]
 name = "ya-sb-util"
 version = "0.1.0"
-source = "git+https://github.com/golemfactory/ya-service-bus.git?rev=6b494e17d7a662e0b710af8c5a2e99ab4007fdb9#6b494e17d7a662e0b710af8c5a2e99ab4007fdb9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "20b2e7cfeacabb607fe1fd1dc8e653c3ee853f2e127cb1ed72955ea4cb84f951"
 dependencies = [
  "futures 0.3.12",
  "pin-project 0.4.27",
@@ -7817,8 +7918,9 @@ dependencies = [
 
 [[package]]
 name = "ya-service-bus"
-version = "0.3.1"
-source = "git+https://github.com/golemfactory/ya-service-bus.git?rev=6b494e17d7a662e0b710af8c5a2e99ab4007fdb9#6b494e17d7a662e0b710af8c5a2e99ab4007fdb9"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7650b19a2f73f5d6cded3045756fc35048abc094781154d3145ca21dd68ce8c6"
 dependencies = [
  "actix 0.9.0",
  "flexbuffers",
@@ -7833,7 +7935,7 @@ dependencies = [
  "tokio-util 0.2.0",
  "url 2.2.0",
  "uuid 0.8.2",
- "ya-sb-proto",
+ "ya-sb-proto 0.2.0",
  "ya-sb-util",
 ]
 
@@ -8038,7 +8140,7 @@ dependencies = [
  "ya-payment",
  "ya-persistence",
  "ya-provider",
- "ya-sb-proto",
+ "ya-sb-proto 0.1.0",
  "ya-sb-router",
  "ya-service-api",
  "ya-service-api-derive",
